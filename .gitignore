@@ -18,7 +18,7 @@
 
 *.map
 README-template.md
-README.md
+README-FE.md
 .vscode/
 design/
 
