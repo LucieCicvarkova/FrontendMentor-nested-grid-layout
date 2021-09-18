@@ -25,7 +25,7 @@ body {
   font-size: 11px;
   text-align: center;  
 }
-.attribution_link {
+.attribution__link {
   color: hsl(228, 45%, 44%);
 }
 
@@ -33,9 +33,10 @@ body {
   max-width: 1100px;  
   margin: 100px auto 10px auto;
   display: grid;
-  grid-template-columns: 250px 270px 250px 240px;
+  grid-template-columns: repeat(4, 250px);
   grid-template-rows: auto auto;
-  grid-gap: 30px; 
+  grid-row-gap: 25px; 
+  grid-column-gap: 30px;
   @media (max-width: $break-point-tablet) {
     display: block;
     max-width: 750px;    
@@ -81,10 +82,7 @@ body {
   grid-column: 4/5;
   grid-row: 1/3;
   background-color: $white;
-  color: $gray;
-  .card__text {
-    line-height: 1.5;
-  }
+  color: $gray; 
 }
 .card__content {
   display: flex;
