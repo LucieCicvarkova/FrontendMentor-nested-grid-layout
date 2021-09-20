@@ -16,13 +16,22 @@ html {
 :before {
   box-sizing: inherit;
 }
+h1, h2, p, blockquote {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
 body {
   font-family: $font;
-  font-size: 13px;
+  font-size: 0.8125rem;
   background-color: $bground;
 }
 .attribution {
-  font-size: 11px;
+  font-size: 0.6825rem;
   text-align: center;  
 }
 .attribution__link {
@@ -31,65 +40,70 @@ body {
 
 .wrapper {
   max-width: 1100px;  
-  margin: 100px auto 10px auto;
+  margin: 6.25rem auto 2rem auto;
   display: grid;
   grid-template-columns: repeat(4, 250px);
   grid-template-rows: auto auto;
-  grid-row-gap: 25px; 
-  grid-column-gap: 30px;
+  grid-row-gap: 1.5625rem; 
+  grid-column-gap: 1.875rem;
   @media (max-width: $break-point-tablet) {
     display: block;
     max-width: 750px;    
-    margin: 70px auto 10px auto;    
+    margin: 4.375rem auto 0.625rem auto;    
   }
   @media (max-width: $break-point-mobile) {    
     max-width: 330px;       
   }
 }
 .card {
-  padding: 20px 35px;
+  padding: 1.25rem 2.1875rem;
   border-radius: 10px;
   color: $white;
+  @media (min-width: $break-point-tablet) {
+    box-shadow: 15px 25px 5px hsl(212, 35%, 92%);
+  }   
   @media (max-width: $break-point-tablet) {
-    margin: 25px 50px;
+    margin: 1.5625rem 3.125rem;
   } 
 }
-.card--1 {
-  grid-column: 1/3;
-  grid-row: 1/2;
+.card--violet { 
   background-image: url("images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;  
   background-color: $violet;
   background-position: top left 90%;  
 }
-.card--2 {
-  grid-column: 3/4;
-  grid-row: 1/2;
+.card--gray {
   background-color: $gray;
 }
-.card--3 {
-  grid-column: 1/2;
-  grid-row: 2/3;
+.card--white {
   background-color: $white;
   color: $gray;
 }
-.card--4 {
-  grid-column: 2/4;
-  grid-row: 2/3;
+.card--black {
   background-color: $black;
 }
-.card--5 {
+.card--position1 {
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+.card--position2 {
+  grid-column: 3/4;
+  grid-row: 1/2; 
+}
+.card--position3 {
+  grid-column: 1/2;
+  grid-row: 2/3; 
+}
+.card--position4 {
+  grid-column: 2/4;
+  grid-row: 2/3; 
+}
+.card--position5 {
   grid-column: 4/5;
-  grid-row: 1/3;
-  background-color: $white;
-  color: $gray; 
+  grid-row: 1/3; 
 }
-.card__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-content: space-between;
-}
+
+
 .card__heading {
   flex: 0 1 auto;
   display: grid;
@@ -119,8 +133,8 @@ body {
 }
 .card__title {
   flex: 0 1 auto;
-  font-size: 16px;
-  padding: 20px 0 20px 0;
+  font-size: 1rem;
+  padding: 1.25rem 0 .25rem 0;
 }
 .card__text {
   flex: 0 1 auto;
